@@ -2,9 +2,13 @@ import java.util.ArrayList;
 
 public class View {
   public static void homeScreen(){
-    System.out.println("____________________");
-    System.out.println("|||  BLACK JACK  |||");
-    System.out.println("--------------------");
+    System.out.println("________________________________");
+    System.out.println("|||||||    BLACK JACK    |||||||");
+    System.out.println("--------------------------------");
+    System.out.println("                         _\r\n" + //
+        " ,'`.    _  _    /\\    _(_)_\r\n" + //
+        "(_,._)  ( `' )  <  >  (_)+(_)\r\n" + //
+        "  /\\     `.,'    \\/      |");
     System.out.println("\nSeja bem-vindo!!!\n");
     System.out.print("Aperte ENTER para continuar >> ");
     Input.in.nextLine();
@@ -27,9 +31,9 @@ public class View {
     card.name == "Rainha" ? "Q" : 
     card.name == "Valete" ? "J" : card.name;
 
-    var type = card.type == "Espadas" ? "♠" :
-    card.type == "Copas" ? "♥" : 
-    card.type == "Ouros" ? "♦" : "♣";
+    var type = card.type == "Espadas" ? "{>" :
+    card.type == "Copas" ? "<3" : 
+    card.type == "Ouros" ? "<>" : "-%";
 
     String[][] points = new String[][] { {" ", " ", " "}, {" ", " ", " "}, {" ", " ", " "}};
 
@@ -139,21 +143,21 @@ public class View {
       System.out.printf("|%s %s %s|\n", points[0][0], points[0][1], points[0][2]);
       System.out.printf("|%s %s %s|\n", points[1][0], points[1][1], points[1][2]);
       System.out.printf("|%s %s %s|\n", points[2][0], points[2][1], points[2][2]);
-      System.out.printf( "|____%s|\n", type);
+      System.out.printf( "|___%s|\n", type);
     } else if (card.getPontuation() == 10) {
       System.out.println(" _____");
       System.out.printf( "|%s  WW|\n", name);
       System.out.println("| ^ {)|");
       System.out.println("|(.)%%|");
       System.out.println("|  %%%|");
-      System.out.printf( "|____%s|\n", type);
+      System.out.printf( "|___%s|\n", type);
     } else {
       System.out.println(" _____");
       System.out.printf( "|%s    |\n", name);
       System.out.printf("|%s %s %s|\n", points[0][0], points[0][1], points[0][2]);
       System.out.printf("|%s %s %s|\n", points[1][0], points[1][1], points[1][2]);
       System.out.printf("|%s %s %s|\n", points[2][0], points[2][1], points[2][2]);
-      System.out.printf( "|____%s|\n", type);
+      System.out.printf( "|___%s|\n", type);
     }
 
 
